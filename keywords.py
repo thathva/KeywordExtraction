@@ -22,7 +22,3 @@ class Keywords:
         domains=[i.lower() for i in domains]
         rs=[x for ele in keywords for x in domains if x in ele]
         return np.unique(rs)
-   
-o=Keywords()
-k=o.vectorizer(text)
-l=o.keyword(k,'animation')
