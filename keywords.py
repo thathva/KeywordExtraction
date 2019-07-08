@@ -12,7 +12,7 @@ class Keywords:
         return keywords
     
     def keyword(self,keywords,column_name):
-        df=pd.read_csv('Domain_keyword.csv')
+        df=pd.read_csv('Domain_keyword.csv',encoding = 'unicode_escape')
         df=df.fillna(method='ffill')
         try:
             domains=df[column_name].tolist()
